@@ -4,7 +4,7 @@ import emailjs from 'emailjs-com';
 import './index.css';
 
 const CONTACT = {
-    phone: '+91-9876543210',
+    phone: '+91-7416827212',
     email: 'saineerajmahanthi@gmail.com',
     linkedin: 'https://www.linkedin.com/in/netaji-sai-neeraj-mahanthi',
     github: 'https://github.com/nethajisaineeraj',
