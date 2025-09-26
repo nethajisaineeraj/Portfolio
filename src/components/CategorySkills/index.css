@@ -1,0 +1,114 @@
+.category-skills-wrapper {
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #000;
+    padding: 0 3rem;
+}
+
+.category-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    background: none;
+    border: none;
+    color: transparent;
+    background-image: linear-gradient(90deg,
+            #1976d2,
+            #2196f3 40%,
+            #00bcd4 80%,
+            #64b5f6);
+    text-shadow:
+        0 0 4px #1976d255,
+        0 0 8px #2196f344,
+        0 0 12px #00bcd433;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.category-skills-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.category-skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    box-shadow: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    max-width: 200px;
+    width: 100%;
+}
+
+.category-skill-item:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 0 16px 0 #2196f366, 0 0 32px 0 #2196f322;
+}
+
+.category-skill-img {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    background: #101c1c;
+    box-shadow: 0 0 8px 0 #00ff9933;
+}
+
+.category-skill-name {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+    letter-spacing: 1px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+    .category-skill-item {
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .category-skill-img {
+        margin-bottom: 0;
+        margin-right: 0.7rem;
+    }
+
+    .category-skill-name {
+        margin-top: 0;
+    }
+
+    .category-heading {
+        font-size: 1.2rem;
+        padding: 0.4rem 1.2rem;
+    }
+
+    .category-skill-item {
+        padding: 0.7rem 1rem;
+    }
+
+    .category-skill-img {
+        width: 36px;
+        height: 36px;
+    }
+}

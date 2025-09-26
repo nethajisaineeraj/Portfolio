@@ -1,0 +1,153 @@
+.workshopdetails-modal {
+    background: #101c1c;
+    border: 2.5px solid #2196f3;
+    box-shadow: 0 0 32px 0 #2196f3cc, 0 0 64px 0 #1976d2cc;
+    border-radius: 1.5rem;
+    padding: 2.5rem 2rem 2rem 2rem;
+    max-width: 600px;
+    width: 95vw;
+    color: #fff;
+    position: relative;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: popupFadeIn 0.3s;
+}
+
+.workshopdetails-img {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    border: 2px solid #2196f3;
+    background: #181f1f;
+}
+
+.workshopdetails-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background-image: linear-gradient(90deg, #1976d2, #2196f3 60%, #00bcd4 100%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.workshopdetails-desc {
+    color: #b0bec5;
+    font-size: 1.08rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.workshopdetails-section {
+    width: 100%;
+    margin-bottom: 1.2rem;
+}
+
+.workshopdetails-section h4 {
+    color: #2196f3;
+    font-size: 1.08rem;
+    margin-bottom: 0.5rem;
+}
+
+.workshopdetails-list {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+}
+
+.workshopdetails-list li {
+    margin-bottom: 0.4rem;
+    color: #e3f2fd;
+    font-size: 0.98rem;
+    list-style: disc inside;
+    color: #b0bec5;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.workshopdetails-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.workshopdetails-tech {
+    background: linear-gradient(90deg, #1976d2, #00bcd4);
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.7rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.workshopdetails-credentials {
+    background: linear-gradient(90deg, #1976d2, #00bcd4);
+    color: #fff;
+    border: none;
+    border-radius: 1.2rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px 0 #2196f344;
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.workshopdetails-credentials:hover {
+    background: linear-gradient(90deg, #00bcd4, #1976d2);
+    color: #fff;
+}
+
+.workshopdetails-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    background: none;
+    border: none;
+    color: #2196f3;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.workshopdetails-close:hover {
+    color: #00bcd4;
+}
+
+.workshopdetails-notfound {
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.workshopdetails-backbtn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #1976d2;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.workshopdetails-backbtn:hover {
+    background: #00bcd4;
+}

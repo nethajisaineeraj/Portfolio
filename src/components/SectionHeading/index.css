@@ -1,0 +1,15 @@
+.heading-gradient {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #00cfff, #007bff, #00ffae, #00cfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 8px #429fb4b1) drop-shadow(0 0 16px #007bff44);
+}
+
+@media (max-width: 768px) {
+    .heading-gradient {
+        font-size: 2rem;
+    }
+}

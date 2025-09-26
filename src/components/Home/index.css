@@ -1,0 +1,15 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .home-container {
+        padding: 0px;
+        width: 100%;
+    }
+    
+}
+

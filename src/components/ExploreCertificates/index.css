@@ -1,0 +1,27 @@
+
+.explore-certificates-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    background: #000;
+}
+
+
+.explore-certificates-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center; 
+}
+
+@media (max-width: 768px) {
+    .explore-certificates-list {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+}

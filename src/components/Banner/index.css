@@ -1,0 +1,197 @@
+.banner-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 90vh;
+    padding: 1.5rem;
+    background: #000;
+    border: none;
+}
+
+.banner-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.banner-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0 0 1rem 0;
+}
+
+.banner-title-part-hi {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.banner-title-part-name {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #00cfff 30%, #007bff 60%, #00ffae 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Segoe UI', 'Cursive', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+.banner-title-part-tagline {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fffd44;
+    /* background: linear-gradient(90deg, #fffd44 0%, #ff005a 100%); */
+    background: linear-gradient(90deg, #18b3d2 30%, #1d2fd1 60%, #2d5d72 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    letter-spacing: 1px;
+    margin-top: 0.2rem;
+}
+
+.banner-title-part-slogan {
+    font-size: 1.2rem;
+    font-weight: 400;
+    background: linear-gradient(90deg, #a8c7e0 30%, #94a5d8ec 60%, #57b3f1 100%);
+    /* background: linear-gradient(90deg, #fffd44 0%, #ff005a 100%); */
+    /* background: linear-gradient(90deg, #ce2017 0%, #4a0c7fc7 100%); */
+    /* background: linear-gradient(90deg, #ff6a00, #ee0979); */
+    /* background: linear-gradient(90deg, #8e2de2, #4a00e0); */
+    /* background: linear-gradient(90deg, #00c6ff, #0072ff); */
+    /* background: linear-gradient(90deg, #ff9a9e, #fad0c4); */
+    /* background: linear-gradient(90deg, #FFD700, #FF8C00); */
+    /* background: linear-gradient(90deg, #00F5A0, #9B5DE5); */
+    /* background: linear-gradient(90deg, #00C9FF, #92FE9D); */
+    /* background: linear-gradient(90deg, #FF6FD8, #3813C2); */
+    /* background: linear-gradient(90deg, #2d5a08, #46a919); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 0.5px;
+    margin-top: 0.5rem;
+}
+
+.banner-left .emoji {
+    font-size: 2.5rem;
+    margin-right: 0.5rem;
+}
+
+.banner-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-img-wrapper {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    max-height: 520px;
+    border-radius: 5%;
+    position: relative;
+    z-index: 0;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+@property --angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.banner-img-wrapper::after,
+.banner-img-wrapper::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(from var(--angle), transparent 30%, rgb(0, 60, 255));
+    /* background: conic-gradient(from var(--angle),#00cfff, #007bff, #00ffae, #00cfff); */
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 0;
+    padding: 4px;
+    border-radius: 5%;
+    animation: 3s spin linear infinite;
+}
+
+.banner-img-wrapper::before {
+    filter: blur(1.5rem);
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .banner-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 0.5rem;
+    }
+
+    .banner-title{
+        align-items: center;
+    }
+
+    .banner-left,
+    .banner-right {
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner-right {
+        margin-top: 2rem;
+    }
+
+    .banner-img-wrapper {
+        width: 90%;
+        height: auto;
+    }
+
+    .banner-img {
+        width: 100%;
+        height: auto;
+        border-radius: 5%;
+    }
+
+    .banner-title-part-name {
+        font-size: 2rem;
+    }
+} 

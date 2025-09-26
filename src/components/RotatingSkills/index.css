@@ -1,0 +1,194 @@
+.RotatingSkillsContainer {
+    background-color: #000;
+    width: 100%;
+    /* min-height: 100vh; */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.slider {
+    margin-top: 1.5rem;
+    position: absolute;
+    width: 6vw;
+    height: 6vw;
+    max-width: 120px;
+    max-height: 120px;
+    top: 12%;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+
+.item {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity)))) translateZ(35vw);
+    width: 60px;
+    height: 60px;
+}
+
+@media (max-width: 1024px) {
+    .slider {
+        width: 12vw;
+        height: 12vw;
+        max-width: 90px;
+        max-height: 90px;
+        top: 10%;
+        transform: perspective(800px);
+    }
+
+    .item {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        display: none;
+    }
+
+    .item {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-18deg) rotateY(0deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotateX(-18deg) rotateY(360deg);
+    }
+}
+
+.item {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity)))) translateZ(35vw);
+}
+
+.skill-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.myskills-text-image-container {
+    margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    max-width: 90%;
+}
+
+.myskills-heading {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 5rem);
+    line-height: 1.2;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.myskills-heading-my {
+    background: linear-gradient(90deg, #00cfff, #007bff, #00ffae, #00cfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    letter-spacing: 2px;
+    filter: drop-shadow(0 0 8px #429fb4b1) drop-shadow(0 0 16px #007bff44);
+}
+
+.myskills-heading-skills {
+    color: transparent;
+    font-weight: 800;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 2px #00cfff;
+    filter: drop-shadow(0 0 8px #429fb4b1) drop-shadow(0 0 16px #007bff44);
+}
+
+.modal-image {
+    background-image: url("../../images/coder.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 80%;
+    max-width: 900px;
+    aspect-ratio: 16/16;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .slider {
+        width: 12vw;
+        height: 12vw;
+        max-width: 90px;
+        max-height: 90px;
+        top: 10%;
+        transform: perspective(800px);
+    }
+
+    .myskills-heading {
+        font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+    }
+
+    .modal-image {
+        width: 85%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        display: none;
+    }
+
+    .myskills-text-image-container {
+        margin-top: 2rem;
+        gap: 1rem;
+    }
+
+    .myskills-heading {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .modal-image {
+        width: 95%;
+        min-height: 280px;  
+        max-width: 400px;
+        aspect-ratio: 4/3;
+    }
+}
+
+@media (max-width: 480px) {
+    .myskills-heading {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .modal-image {
+        width: 100%;
+        max-width: 320px;
+        min-height: 230px;
+        aspect-ratio: 1/1;
+    }
+}

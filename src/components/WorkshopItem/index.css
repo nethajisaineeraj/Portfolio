@@ -1,0 +1,107 @@
+.workshop-item-card {
+  background: #101c1c;
+  border-radius: 1.2rem;
+  border: 1.5px solid #1976d2;
+  box-shadow: 0 2px 12px 0 #2196f322;
+  padding: 2rem 1.5rem 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 370px;
+  width: 100%;
+  min-height: 530px;
+  position: relative;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+}
+
+.workshop-item-card:hover {
+  box-shadow: 0 4px 32px 0 #2196f355;
+  border-color: #00bcd4;
+  transform: translateY(-6px) scale(1.03);
+}
+
+.workshop-item-img {
+  width: 100%;
+  max-width: 320px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.7rem;
+  background: #181f1f;
+  margin-bottom: 1.2rem;
+  border: 1.5px solid #2196f3;
+}
+
+.workshop-item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.workshop-item-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  background-image: linear-gradient(90deg, #1976d2, #2196f3 60%, #00bcd4 100%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.workshop-item-desc {
+  color: #b0bec5;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+
+.workshop-item-moreinfo {
+  position: absolute;
+  left: 1.2rem;
+  bottom: 1.2rem;
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid #2196f3;
+  border-radius: 1.2rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 #2196f344;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .workshop-item-card {
+    /* max-width: 100%; */
+    min-height: 480px;
+    /* height: auto; */
+    padding: 1.2rem;
+  }
+
+  .workshop-item-img {
+    max-width: 100%;
+    border-radius: 0.6rem;
+  }
+
+  .workshop-item-name {
+    font-size: 1.3rem;
+  }
+
+  .workshop-item-desc {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 468px) {
+  .workshop-item-card {
+    /* max-width: 100%; */
+    min-height: 500px;
+    /* height: auto; */
+    padding: 1rem;
+  }
+}

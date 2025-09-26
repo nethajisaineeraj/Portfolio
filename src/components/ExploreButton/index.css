@@ -1,0 +1,127 @@
+.explore-link-styles {
+    align-self: flex-end;
+}
+
+.explore-button-styles {
+    background: transparent;
+    color: #00cfff;
+    border: 2px solid #00cfff;
+    border-radius: 16px;
+    padding: 0.6rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 12px 0 #007bff33;
+    transition: box-shadow 0.3s, border-color 0.3s, color 0.3s;
+    outline: none;
+    margin: 1.5rem 0 0 0;
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+}
+
+.explore-button-styles .star {
+    position: absolute;
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+    font-family: inherit;
+}
+
+.explore-button-styles:hover .star,
+.explore-button-styles:focus .star {
+    opacity: 1;
+}
+
+.explore-button-styles .star.star1 {
+    font-size: 1.4rem;
+    top: -25px;
+    left: 20%;
+    transform: translateX(-50%);
+}
+
+.explore-button-styles .star.star2 {
+    font-size: 0.9rem;
+    top: -15px;
+    right: 15%;
+    transform: translateX(50%);
+}
+
+.explore-button-styles .star.star3 {
+    font-size: 1.6rem;
+    bottom: -20px;
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.explore-button-styles .star.star4 {
+    font-size: 0.7rem;
+    bottom: -10px;
+    right: 25%;
+    transform: translateX(50%);
+}
+
+.explore-button-styles .star.star5 {
+    font-size: 1.1rem;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%);
+}
+
+.explore-button-styles .star.star6 {
+    font-size: 0.5rem;
+    top: 60%;
+    right: -20px;
+    transform: translateY(-50%);
+}
+
+.explore-button-styles {
+    align-self: flex-end;
+    position: relative;
+    background: linear-gradient(90deg, #007bff 0%, #00cfff 100%);
+    color: #fff;
+    border: 0px solid;
+    border-radius: 24px;
+    padding: 0.6rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: box-shadow 0.3s, border-color 0.3s, color 0.3s;
+    z-index: 1;
+    margin: 1.5rem 3.5rem 0 0;
+}
+
+.explore-button-styles:hover,
+.explore-button-styles:focus {
+    box-shadow: 0 0 16px 2px #c1ad1773;
+    border: 2px solid #00eaff;
+    background: transparent;
+    border-color: #00eaff;
+    color: #fff;
+}
+
+.explore-button-styles .star {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.explore-button-styles:hover .star {
+    opacity: 1;
+    animation: star-float 0.8s linear infinite;
+}
+
+@media (max-width: 768px) {
+    .explore-link-styles {
+        align-self: center;
+    }
+    
+    .explore-button-styles{
+        margin: 1rem 0 0 0;
+    }
+
+}
